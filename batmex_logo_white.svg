@@ -1,0 +1,27 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Buildings -->
+  <rect x="122" y="85" width="12" height="35" fill="white"/>
+  <rect x="138" y="70" width="12" height="50" fill="white"/>
+  <rect x="154" y="60" width="12" height="60" fill="white"/>
+  <rect x="170" y="75" width="12" height="45" fill="white"/>
+  
+  <!-- Antenna on tallest building -->
+  <rect x="159" y="50" width="2" height="10" fill="white"/>
+  <circle cx="160" cy="48" r="3" fill="white"/>
+  
+  <!-- Crane arm -->
+  <path d="M 115 135 L 160 125" stroke="white" stroke-width="3" fill="none"/>
+  <path d="M 115 135 L 120 145" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Crane vertical support -->
+  <rect x="158" y="125" width="3" height="25" fill="white"/>
+  
+  <!-- Orange element (construction material/beam) - keeping original orange -->
+  <path d="M 160 135 Q 180 140 195 155 L 185 165 Q 170 150 155 145 Z" fill="#FF8C42"/>
+  
+  <!-- BATMEX text -->
+  <text x="150" y="200" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">BATMEX</text>
+  
+  <!-- GROUP text -->
+  <text x="150" y="230" font-family="Arial, sans-serif" font-size="28" font-weight="normal" fill="white" text-anchor="middle" letter-spacing="4">GROUP</text>
+</svg>
