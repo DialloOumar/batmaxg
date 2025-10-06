@@ -18,7 +18,7 @@
     <meta property="og:description" content="Leading construction and logistics company offering comprehensive solutions from commercial construction to equipment transport. Partner with Falibra Group for exceptional results.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://batmexgroup.com">
-    <meta property="og:image" content="BMX_LOGO.png">
+    <meta property="og:image" content="BATMEX-GROUP.png">
     <meta property="og:site_name" content="Batmex Group">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="fr_FR">
@@ -27,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Batmex Group | Construction & Logistics Excellence">
     <meta name="twitter:description" content="Expert construction and logistics solutions. Commercial construction, residential development, and strategic partnerships delivering excellence.">
-    <meta name="twitter:image" content="BMX_LOGO.png">
+    <meta name="twitter:image" content="BATMEX-GROUP.png">
     
     <!-- Business Information -->
     <meta name="geo.region" content="GN">
@@ -39,8 +39,8 @@
     <link rel="canonical" href="https://batmexgroup.com">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="BMX_LOGO.png">
-    <link rel="apple-touch-icon" href="BMX_LOGO.png">
+    <link rel="icon" type="image/png" href="BATMEX-GROUP.png">
+    <link rel="apple-touch-icon" href="BATMEX-GROUP.png">
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -51,7 +51,7 @@
         "alternateName": ["BMX Group", "Batmex Group Guinea", "Batmex Group Conakry"],
         "description": "Batmex Group - Leading construction and logistics company in Guinea, West Africa. Offering comprehensive solutions including commercial construction, residential development, material logistics, equipment transport, and project management services across Guinea and West Africa region.",
         "url": "https://batmexgroup.com",
-        "logo": "https://batmexgroup.com/BMX_LOGO.png",
+        "logo": "https://batmexgroup.com/BATMEX-GROUP.png",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+224-123-456-789",
@@ -67,7 +67,7 @@
             "addressCountry": "GN"
         },
         "sameAs": [
-            "https://linkedin.com/company/batmex-group",
+            "https://www.linkedin.com/company/batmex",
             "https://facebook.com/batmexgroup"
         ],
         "founder": {
@@ -137,7 +137,7 @@
         }
 
         .logo-img {
-            height: 80px;
+            height: 100px;
             width: auto;
             object-fit: contain;
             transition: all 0.3s ease;
@@ -175,6 +175,14 @@
             height: 2px;
             background: #ff6b35;
             transition: width 0.3s ease;
+        }
+        
+        .nav-links a.active {
+            color: #ff6b35;
+        }
+        
+        .nav-links a.active::after {
+            width: 100%;
         }
 
         .nav-links a:hover::after {
@@ -328,7 +336,9 @@
             padding: 0 5%;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(233, 236, 239, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-attachment: fixed;
         }
 
         .hero::before {
@@ -387,7 +397,7 @@
 
         .hero-text p {
             font-size: 1.3rem;
-            color: #b0b0b0;
+            color: #666666;
             margin-bottom: 2.5rem;
             line-height: 1.6;
             animation: slideInLeft 0.8s ease-out 0.2s backwards;
@@ -475,7 +485,7 @@
         }
 
         .stat-label {
-            color: #b0b0b0;
+            color: #666666;
             font-size: 1rem;
         }
 
@@ -496,7 +506,7 @@
         }
 
         .section-header p {
-            color: #b0b0b0;
+            color: #666666;
             font-size: 1.2rem;
         }
 
@@ -541,8 +551,22 @@
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
+            height: 80px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+            border: 2px solid rgba(255, 107, 53, 0.2);
+        }
+        
+        .service-icon img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
         .service-card h3 {
@@ -551,7 +575,7 @@
         }
 
         .service-card p {
-            color: #b0b0b0;
+            color: #666666;
             line-height: 1.6;
         }
 
@@ -563,10 +587,56 @@
         }
 
         footer p {
-            color: #666;
+            color: #666666;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-socials {
+            margin-top: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-link {
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .linkedin-icon {
+            fill: #0077B5;
+        }
+        
+        .facebook-icon {
+            fill: #1877F2;
+        }
+        
+        .social-link:hover .linkedin-icon {
+            fill: #005885;
+        }
+        
+        .social-link:hover .facebook-icon {
+            fill: #166FE5;
         }
 
         @media (max-width: 768px) {
+            .logo-img {
+                height: 100px;
+            }
+            
             .mobile-menu-btn {
                 display: flex;
             }
@@ -773,8 +843,14 @@
 
         .about-card li {
             margin-bottom: 0.8rem;
-            color: #b0b0b0;
+            color: #666666;
             line-height: 1.6;
+        }
+        
+        .about-card p {
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
         .team-section {
@@ -814,8 +890,25 @@
         }
 
         .member-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 4px solid rgba(255, 107, 53, 0.3);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
             font-size: 3rem;
-            margin-bottom: 1rem;
+        }
+        
+        .member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .team-member h4 {
@@ -830,7 +923,7 @@
         }
 
         .member-bio {
-            color: #b0b0b0;
+            color: #666666;
             font-size: 0.9rem;
             line-height: 1.5;
         }
@@ -905,7 +998,7 @@
 
         .logo-subtitle {
             font-size: 1rem;
-            color: #b0b0b0;
+            color: #666666;
             font-weight: 600;
             letter-spacing: 2px;
             margin-top: 0.5rem;
@@ -933,7 +1026,7 @@
         }
 
         .partner-content p {
-            color: #b0b0b0;
+            color: #666666;
             line-height: 1.7;
             margin-bottom: 2rem;
             font-size: 1.1rem;
@@ -960,7 +1053,7 @@
         }
 
         .stat-item .stat-label {
-            color: #b0b0b0;
+            color: #666666;
             font-size: 0.9rem;
             font-weight: 600;
         }
@@ -1009,7 +1102,7 @@
         }
 
         .benefit-item p {
-            color: #b0b0b0;
+            color: #666666;
             line-height: 1.6;
             font-size: 0.95rem;
         }
@@ -1115,9 +1208,31 @@
         }
 
         .project-image {
-            font-size: 4rem;
-            text-align: center;
+            height: 200px;
             margin-bottom: 1.5rem;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-image.placeholder {
+            font-size: 4rem;
+            color: #ff6b35;
         }
 
         .project-content h3 {
@@ -1135,7 +1250,7 @@
         }
 
         .project-description {
-            color: #b0b0b0;
+            color: #666666;
             line-height: 1.6;
             margin-bottom: 1.5rem;
         }
@@ -1207,7 +1322,7 @@
         }
 
         .contact-card p {
-            color: #b0b0b0;
+            color: #666666;
             line-height: 1.6;
         }
 
@@ -1275,7 +1390,7 @@
 
         .form-group input::placeholder,
         .form-group textarea::placeholder {
-            color: #888;
+            color: #888888;
         }
 
         .form-group select option {
@@ -1289,7 +1404,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="BMX_LOGO.png" alt="Batmex Group Guinea - Construction and Logistics Company Logo Conakry" class="logo-img">
+                <img src="BATMEX-GROUP.png" alt="Batmex Group Guinea - Construction and Logistics Company Logo Conakry" class="logo-img">
             </div>
             <ul class="nav-links">
                 <li><a href="#about" data-en="About" data-fr="À Propos">About</a></li>
@@ -1385,19 +1500,25 @@
                 <h3 data-en="Leadership Team" data-fr="Équipe de Direction">Leadership Team</h3>
                 <div class="team-grid">
                     <div class="team-member">
-                        <div class="member-avatar">👨‍💼</div>
+                        <div class="member-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Marcus Rodriguez">
+                        </div>
                         <h4>Marcus Rodriguez</h4>
                         <p class="member-title" data-en="Chief Executive Officer" data-fr="Directeur Général">Chief Executive Officer</p>
                         <p class="member-bio" data-en="15+ years in construction management with expertise in large-scale commercial projects." data-fr="Plus de 15 ans en gestion de construction avec expertise dans les projets commerciaux à grande échelle.">15+ years in construction management with expertise in large-scale commercial projects.</p>
                     </div>
                     <div class="team-member">
-                        <div class="member-avatar">👩‍🔧</div>
+                        <div class="member-avatar">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah Chen">
+                        </div>
                         <h4>Sarah Chen</h4>
                         <p class="member-title" data-en="Chief Operations Officer" data-fr="Directrice des Opérations">Chief Operations Officer</p>
                         <p class="member-bio" data-en="Expert in logistics optimization and supply chain management across multiple industries." data-fr="Experte en optimisation logistique et gestion de la chaîne d'approvisionnement dans plusieurs industries.">Expert in logistics optimization and supply chain management across multiple industries.</p>
                     </div>
                     <div class="team-member">
-                        <div class="member-avatar">👨‍🏗️</div>
+                        <div class="member-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="David Thompson">
+                        </div>
                         <h4>David Thompson</h4>
                         <p class="member-title" data-en="Head of Construction" data-fr="Chef de la Construction">Head of Construction</p>
                         <p class="member-bio" data-en="Licensed engineer with a track record of delivering complex projects on time and under budget." data-fr="Ingénieur licencié avec un historique de livraison de projets complexes à temps et sous budget.">Licensed engineer with a track record of delivering complex projects on time and under budget.</p>
@@ -1414,32 +1535,44 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🏗️</div>
+                <div class="service-icon">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Commercial Construction">
+                </div>
                 <h3 data-en="Commercial Construction" data-fr="Construction Commerciale">Commercial Construction</h3>
                 <p data-en="Expert construction services for office buildings, retail spaces, and industrial facilities with precision and efficiency." data-fr="Services de construction experts pour immeubles de bureaux, espaces commerciaux et installations industrielles avec précision et efficacité.">Expert construction services for office buildings, retail spaces, and industrial facilities with precision and efficiency.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🏘️</div>
+                <div class="service-icon">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Residential Development">
+                </div>
                 <h3 data-en="Residential Development" data-fr="Développement Résidentiel">Residential Development</h3>
                 <p data-en="Quality residential construction from single-family homes to multi-unit developments, built to last." data-fr="Construction résidentielle de qualité, des maisons unifamiliales aux développements multi-unités, construites pour durer.">Quality residential construction from single-family homes to multi-unit developments, built to last.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🚛</div>
+                <div class="service-icon">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Material Logistics">
+                </div>
                 <h3 data-en="Material Logistics" data-fr="Logistique de Matériaux">Material Logistics</h3>
                 <p data-en="Seamless supply chain management ensuring materials arrive on time, every time, keeping your project on schedule." data-fr="Gestion transparente de la chaîne d'approvisionnement garantissant que les matériaux arrivent à temps, à chaque fois, maintenant votre projet dans les délais.">Seamless supply chain management ensuring materials arrive on time, every time, keeping your project on schedule.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">📦</div>
+                <div class="service-icon">
+                    <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Equipment Transport">
+                </div>
                 <h3 data-en="Equipment Transport" data-fr="Transport d'Équipement">Equipment Transport</h3>
                 <p data-en="Specialized heavy equipment transport and machinery logistics with safety as our top priority." data-fr="Transport spécialisé d'équipement lourd et logistique de machinerie avec la sécurité comme priorité absolue.">Specialized heavy equipment transport and machinery logistics with safety as our top priority.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🔧</div>
+                <div class="service-icon">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Project Management">
+                </div>
                 <h3 data-en="Project Management" data-fr="Gestion de Projet">Project Management</h3>
                 <p data-en="Comprehensive project oversight from planning to execution, ensuring timely delivery within budget." data-fr="Supervision complète du projet de la planification à l'exécution, garantissant une livraison en temps voulu dans le budget.">Comprehensive project oversight from planning to execution, ensuring timely delivery within budget.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">♻️</div>
+                <div class="service-icon">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sustainable Solutions">
+                </div>
                 <h3 data-en="Sustainable Solutions" data-fr="Solutions Durables">Sustainable Solutions</h3>
                 <p data-en="Eco-friendly construction practices and green logistics to minimize environmental impact." data-fr="Pratiques de construction écologiques et logistique verte pour minimiser l'impact environnemental.">Eco-friendly construction practices and green logistics to minimize environmental impact.</p>
             </div>
@@ -1453,7 +1586,9 @@
         </div>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">🏢</div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Metro Business Center">
+                </div>
                 <div class="project-content">
                     <h3>Metro Business Center</h3>
                     <p class="project-type">Commercial Construction</p>
@@ -1466,7 +1601,9 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image">🏘️</div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Riverside Heights">
+                </div>
                 <div class="project-content">
                     <h3>Riverside Heights</h3>
                     <p class="project-type">Residential Development</p>
@@ -1479,7 +1616,9 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image">🏭</div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="TechFlow Manufacturing">
+                </div>
                 <div class="project-content">
                     <h3>TechFlow Manufacturing</h3>
                     <p class="project-type">Industrial Construction</p>
@@ -1492,7 +1631,9 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image">🚛</div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Regional Supply Chain Hub">
+                </div>
                 <div class="project-content">
                     <h3>Regional Supply Chain Hub</h3>
                     <p class="project-type">Logistics Infrastructure</p>
@@ -1678,7 +1819,23 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Batmex Group Construction & Logistics Guinea. All rights reserved. | Batmex Group Conakry, West Africa</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Batmex Group Construction & Logistics Guinea. All rights reserved. | Batmex Group Conakry, West Africa</p>
+            <div class="footer-socials">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/batmex" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="linkedin-icon">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/batmexgroup" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="facebook-icon">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
@@ -1710,7 +1867,7 @@
             });
         });
 
-        // Header background on scroll
+        // Header background on scroll and section highlighting
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -1719,6 +1876,33 @@
             } else {
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+            
+            // Section highlighting
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+            const scrollPosition = window.scrollY + 200; // Offset for better highlighting
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    // Remove active class from all nav links
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    
+                    // Add active class to current section link
+                    const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+            
+            // Special case for hero section (when at top)
+            if (window.scrollY < 200) {
+                navLinks.forEach(link => link.classList.remove('active'));
             }
         });
 
