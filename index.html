@@ -796,8 +796,51 @@
             }
             
             .partners-row {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+                height: auto;
+                overflow: visible;
+                max-width: 100%;
+            }
+            
+            
+            .partner-card.featured {
+                position: static !important;
+                transform: none !important;
+                opacity: 1 !important;
+                animation: none !important;
+                z-index: auto !important;
+                max-width: 100%;
+            }
+            
+            .partner-card.featured {
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+            
+            .partner-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .partnership-stats {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .stat-item .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .partner-content h3 {
+                font-size: 1.3rem;
+                text-align: center;
+            }
+            
+            .partner-content p {
+                font-size: 0.9rem;
+                text-align: center;
             }
         }
 
@@ -959,12 +1002,12 @@
         
         .partners-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
-
+        
         .partner-card.featured {
             background: linear-gradient(145deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.02));
             border: 2px solid rgba(255, 107, 53, 0.3);
@@ -1699,7 +1742,6 @@
                     </div>
                     <div class="partner-content">
                         <h3 data-en="Falibra Group Partnership" data-fr="Partenariat Falibra Group">Falibra Group Partnership</h3>
-                        <p data-en="Our strategic partnership with Falibra Group combines decades of construction expertise with innovative logistics solutions. Together, we deliver comprehensive infrastructure projects that set new industry standards." data-fr="Notre partenariat stratégique avec Falibra Group combine des décennies d'expertise en construction avec des solutions logistiques innovantes. Ensemble, nous livrons des projets d'infrastructure complets qui établissent de nouveaux standards industriels.">Our strategic partnership with Falibra Group combines decades of construction expertise with innovative logistics solutions. Together, we deliver comprehensive infrastructure projects that set new industry standards.</p>
                         <div class="partnership-stats">
                             <div class="stat-item">
                                 <div class="stat-number">8+</div>
@@ -1720,8 +1762,7 @@
                 <div class="partner-card featured">
                     <div class="partner-header">
                         <div class="partner-logo">
-                            <div class="logo-placeholder">ALGA</div>
-                            <div class="logo-subtitle" data-en="ARCH&ING" data-fr="ARCH&ING">ARCH&ING</div>
+                            <img src="AlGA-Arch.jpg" alt="ALGA Arch&Ing Logo" class="partner-logo-img">
                         </div>
                         <div class="partnership-badge">
                             <span data-en="Architectural Partner" data-fr="Partenaire Architectural">Architectural Partner</span>
@@ -1729,7 +1770,6 @@
                     </div>
                     <div class="partner-content">
                         <h3 data-en="ALGA Arch&Ing Partnership" data-fr="Partenariat ALGA Arch&Ing">ALGA Arch&Ing Partnership</h3>
-                        <p data-en="ALGA Arch&Ing specializes in comprehensive architectural and engineering services including residential, commercial, hospitality and institutional buildings. Their expertise spans technical studies, building engineering (structural, electrical, plumbing, utilities), urban planning, 3D modeling with realistic renders, and complete project coordination from concept to delivery." data-fr="ALGA Arch&Ing se spécialise dans les services architecturaux et d'ingénierie complets incluant les bâtiments résidentiels, commerciaux, hôteliers et institutionnels. Leur expertise couvre les études techniques, l'ingénierie du bâtiment (structure, électricité, plomberie, VRD), l'aménagement urbain, la modélisation 3D avec rendus réalistes, et la coordination complète de projets de la conception à la livraison.">ALGA Arch&Ing se spécialise dans les services architecturaux et d'ingénierie complets incluant les bâtiments résidentiels, commerciaux, hôteliers et institutionnels. Leur expertise couvre les études techniques, l'ingénierie du bâtiment (structure, électricité, plomberie, VRD), l'aménagement urbain, la modélisation 3D avec rendus réalistes, et la coordination complète de projets de la conception à la livraison.</p>
                         <div class="partnership-stats">
                             <div class="stat-item">
                                 <div class="stat-number">5+</div>
@@ -1741,6 +1781,34 @@
                             </div>
                             <div class="stat-item">
                                 <div class="stat-number">$200M+</div>
+                                <div class="stat-label" data-en="Combined Value" data-fr="Valeur Combinée">Combined Value</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="partner-card featured">
+                    <div class="partner-header">
+                        <div class="partner-logo">
+                            <img src="konden-mineral.jpg" alt="Konden Minerals SARL Logo" class="partner-logo-img">
+                        </div>
+                        <div class="partnership-badge">
+                            <span data-en="Mining Partner" data-fr="Partenaire Minier">Mining Partner</span>
+                        </div>
+                    </div>
+                    <div class="partner-content">
+                        <h3 data-en="Konden Minerals SARL Partnership" data-fr="Partenariat Konden Minerals SARL">Konden Minerals SARL Partnership</h3>
+                        <div class="partnership-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label" data-en="Years Partnership" data-fr="Années de Partenariat">Years Partnership</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-label" data-en="Joint Projects" data-fr="Projets Conjoints">Joint Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">$50M+</div>
                                 <div class="stat-label" data-en="Combined Value" data-fr="Valeur Combinée">Combined Value</div>
                             </div>
                         </div>
