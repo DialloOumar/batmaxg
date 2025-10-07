@@ -72,7 +72,7 @@
         ],
         "founder": {
             "@type": "Person",
-            "name": "Marcus Rodriguez"
+            "name": "Amadou Diallo"
         },
         "numberOfEmployees": "50-100",
         "foundingDate": "2008",
@@ -794,6 +794,11 @@
             .form-row {
                 flex-direction: column;
             }
+            
+            .partners-row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         /* About Section Styles */
@@ -951,13 +956,20 @@
             display: flex;
             justify-content: center;
         }
+        
+        .partners-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
         .partner-card.featured {
             background: linear-gradient(145deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.02));
             border: 2px solid rgba(255, 107, 53, 0.3);
-            border-radius: 25px;
-            padding: 3rem;
-            max-width: 800px;
+            border-radius: 20px;
+            padding: 2rem;
             width: 100%;
             transition: all 0.4s ease;
             position: relative;
@@ -1000,6 +1012,14 @@
             background-clip: text;
             line-height: 1;
         }
+        
+        .partner-logo-img {
+            max-width: 200px;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
 
         .logo-subtitle {
             font-size: 1rem;
@@ -1025,21 +1045,21 @@
         }
 
         .partner-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             color: #333333;
         }
 
         .partner-content p {
             color: #666666;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
         .partnership-stats {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: space-around;
         }
 
@@ -1048,13 +1068,13 @@
         }
 
         .stat-item .stat-number {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ff6b35, #f7931e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         .stat-item .stat-label {
@@ -1506,27 +1526,35 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-avatar">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Marcus Rodriguez">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Amadou Diallo">
                         </div>
-                        <h4>Marcus Rodriguez</h4>
+                        <h4>Amadou Diallo</h4>
                         <p class="member-title" data-en="Chief Executive Officer" data-fr="Directeur Général">Chief Executive Officer</p>
-                        <p class="member-bio" data-en="15+ years in construction management with expertise in large-scale commercial projects." data-fr="Plus de 15 ans en gestion de construction avec expertise dans les projets commerciaux à grande échelle.">15+ years in construction management with expertise in large-scale commercial projects.</p>
+                        <p class="member-bio" data-en="Experienced project manager and engineer with 8 years overseeing complex capital projects in mining, construction, and telecommunications. Proven leader of cross-functional teams with a track record of delivering projects on schedule and within budget." data-fr="Chef de projet et ingénieur expérimenté avec 8 ans de supervision de projets complexes dans les secteurs minier, construction et télécommunications. Leader éprouvé d'équipes transversales avec un historique de livraison de projets dans les délais et le budget.">Experienced project manager and engineer with 8 years overseeing complex capital projects in mining, construction, and telecommunications. Proven leader of cross-functional teams with a track record of delivering projects on schedule and within budget.</p>
                     </div>
                     <div class="team-member">
                         <div class="member-avatar">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah Chen">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Mohamed Khalifa Diallo">
                         </div>
-                        <h4>Sarah Chen</h4>
+                        <h4>Mohamed Khalifa Diallo</h4>
                         <p class="member-title" data-en="Chief Operations Officer" data-fr="Directrice des Opérations">Chief Operations Officer</p>
                         <p class="member-bio" data-en="Expert in logistics optimization and supply chain management across multiple industries." data-fr="Experte en optimisation logistique et gestion de la chaîne d'approvisionnement dans plusieurs industries.">Expert in logistics optimization and supply chain management across multiple industries.</p>
                     </div>
                     <div class="team-member">
                         <div class="member-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="David Thompson">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Alpha Oumar Diallo">
                         </div>
-                        <h4>David Thompson</h4>
-                        <p class="member-title" data-en="Head of Construction" data-fr="Chef de la Construction">Head of Construction</p>
-                        <p class="member-bio" data-en="Licensed engineer with a track record of delivering complex projects on time and under budget." data-fr="Ingénieur licencié avec un historique de livraison de projets complexes à temps et sous budget.">Licensed engineer with a track record of delivering complex projects on time and under budget.</p>
+                        <h4>Alpha Oumar Diallo</h4>
+                        <p class="member-title" data-en="Head of IT" data-fr="Chef de l'Informatique">Head of IT</p>
+                        <p class="member-bio" data-en="IT specialist with expertise in digital infrastructure, system integration, and technology solutions for construction and logistics operations." data-fr="Spécialiste informatique avec une expertise en infrastructure numérique, intégration de systèmes et solutions technologiques pour les opérations de construction et de logistique.">IT specialist with expertise in digital infrastructure, system integration, and technology solutions for construction and logistics operations.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Mohamed Mouctar Traore">
+                        </div>
+                        <h4>Mohamed Mouctar Traore</h4>
+                        <p class="member-title" data-en="Technical Consultant" data-fr="Consultant Technique">Technical Consultant</p>
+                        <p class="member-bio" data-en="Civil engineer specializing in technical supervision and project coordination, ensuring quality standards and timely delivery." data-fr="Ingénieur civil spécialisé dans le suivi technique et la coordination de projets, garantissant la qualité et le respect des délais.">Ingénieur civil spécialisé dans le suivi technique et la coordination de projets, garantissant la qualité et le respect des délais.</p>
                     </div>
                 </div>
             </div>
@@ -1659,12 +1687,11 @@
             <p data-en="Building success through trusted collaborations and strategic alliances" data-fr="Construire le succès grâce à des collaborations de confiance et des alliances stratégiques">Building success through trusted collaborations and strategic alliances</p>
         </div>
         <div class="partnerships-content">
-            <div class="partnership-highlight">
+            <div class="partners-row">
                 <div class="partner-card featured">
                     <div class="partner-header">
                         <div class="partner-logo">
-                            <div class="logo-placeholder">FALIBRA</div>
-                            <div class="logo-subtitle" data-en="GROUP" data-fr="GROUPE">GROUP</div>
+                            <img src="FALIBRA-Group.jpg" alt="Falibra Group Logo" class="partner-logo-img">
                         </div>
                         <div class="partnership-badge">
                             <span data-en="Strategic Partner" data-fr="Partenaire Stratégique">Strategic Partner</span>
@@ -1684,6 +1711,36 @@
                             </div>
                             <div class="stat-item">
                                 <div class="stat-number">$500M+</div>
+                                <div class="stat-label" data-en="Combined Value" data-fr="Valeur Combinée">Combined Value</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="partner-card featured">
+                    <div class="partner-header">
+                        <div class="partner-logo">
+                            <div class="logo-placeholder">ALGA</div>
+                            <div class="logo-subtitle" data-en="ARCH&ING" data-fr="ARCH&ING">ARCH&ING</div>
+                        </div>
+                        <div class="partnership-badge">
+                            <span data-en="Architectural Partner" data-fr="Partenaire Architectural">Architectural Partner</span>
+                        </div>
+                    </div>
+                    <div class="partner-content">
+                        <h3 data-en="ALGA Arch&Ing Partnership" data-fr="Partenariat ALGA Arch&Ing">ALGA Arch&Ing Partnership</h3>
+                        <p data-en="ALGA Arch&Ing specializes in comprehensive architectural and engineering services including residential, commercial, hospitality and institutional buildings. Their expertise spans technical studies, building engineering (structural, electrical, plumbing, utilities), urban planning, 3D modeling with realistic renders, and complete project coordination from concept to delivery." data-fr="ALGA Arch&Ing se spécialise dans les services architecturaux et d'ingénierie complets incluant les bâtiments résidentiels, commerciaux, hôteliers et institutionnels. Leur expertise couvre les études techniques, l'ingénierie du bâtiment (structure, électricité, plomberie, VRD), l'aménagement urbain, la modélisation 3D avec rendus réalistes, et la coordination complète de projets de la conception à la livraison.">ALGA Arch&Ing se spécialise dans les services architecturaux et d'ingénierie complets incluant les bâtiments résidentiels, commerciaux, hôteliers et institutionnels. Leur expertise couvre les études techniques, l'ingénierie du bâtiment (structure, électricité, plomberie, VRD), l'aménagement urbain, la modélisation 3D avec rendus réalistes, et la coordination complète de projets de la conception à la livraison.</p>
+                        <div class="partnership-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label" data-en="Years Partnership" data-fr="Années de Partenariat">Years Partnership</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">75+</div>
+                                <div class="stat-label" data-en="Joint Projects" data-fr="Projets Conjoints">Joint Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">$200M+</div>
                                 <div class="stat-label" data-en="Combined Value" data-fr="Valeur Combinée">Combined Value</div>
                             </div>
                         </div>
