@@ -822,35 +822,53 @@
                 display: none !important;
             }
             
-            .mobile-partner-card {
-                display: flex;
+            .mobile-partner-deck {
+                position: relative;
+                width: 280px;
+                height: 320px;
+                margin: 0 auto;
+                perspective: 1000px;
+            }
+
+            .mobile-partner-card.deck-card {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
+                height: 100%;
                 padding: 2rem 1.5rem;
                 border-radius: 20px;
-                background: linear-gradient(145deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.02));
+                background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
                 border: 2px solid rgba(255, 107, 53, 0.3);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+                backdrop-filter: blur(10px);
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                margin: 0;
+                cursor: pointer;
+                transform-style: preserve-3d;
+                display: flex;
                 text-align: center;
-                transition: transform 0.5s ease-in-out;
+                transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                will-change: transform, opacity;
             }
             
-            .mobile-partner-card.slide-out-left {
-                transform: translateX(-100%);
+            .mobile-partner-card.deck-card:nth-child(1) {
+                z-index: 3;
+                transform: translateX(0px) translateY(0px) rotateZ(0deg) scale(1);
+                opacity: 1;
             }
-            
-            .mobile-partner-card.slide-out-right {
-                transform: translateX(100%);
+
+            .mobile-partner-card.deck-card:nth-child(2) {
+                z-index: 2;
+                transform: translateX(-8px) translateY(4px) rotateZ(-2deg) scale(0.96);
+                opacity: 0.8;
             }
-            
-            .mobile-partner-card.slide-in-left {
-                transform: translateX(-100%);
-            }
-            
-            .mobile-partner-card.slide-in-right {
-                transform: translateX(100%);
+
+            .mobile-partner-card.deck-card:nth-child(3) {
+                z-index: 1;
+                transform: translateX(-16px) translateY(8px) rotateZ(-4deg) scale(0.92);
+                opacity: 0.6;
             }
             
             .mobile-partner-logo {
@@ -1106,9 +1124,8 @@
         }
 
         .partner-card.featured:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 60px rgba(255, 107, 53, 0.3);
-            border-color: rgba(255, 107, 53, 0.5);
+            border-color: rgba(255, 107, 53, 0.6);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
         }
 
         .partner-header {
@@ -1806,12 +1823,28 @@
             <p data-en="Building success through trusted collaborations and strategic alliances" data-fr="Construire le succès grâce à des collaborations de confiance et des alliances stratégiques">Building success through trusted collaborations and strategic alliances</p>
         </div>
         <div class="partnerships-content">
-            <div class="mobile-partner-card" id="mobile-partner-card" style="display: none;">
-                <div class="mobile-partner-logo">
-                    <img src="FALIBRA-Group.jpg" alt="Partner Logo" id="mobile-partner-img">
+            <div class="mobile-partner-deck" id="mobile-partner-deck" style="display: none;">
+                <div class="mobile-partner-card deck-card" data-partner="0">
+                    <div class="mobile-partner-logo">
+                        <img src="FALIBRA-Group.jpg" alt="Falibra Group Logo">
+                    </div>
+                    <h3 class="mobile-partner-title">Falibra Group Partnership</h3>
+                    <div class="mobile-partner-badge">Strategic Partner</div>
                 </div>
-                <h3 class="mobile-partner-title" id="mobile-partner-title">Falibra Group Partnership</h3>
-                <div class="mobile-partner-badge" id="mobile-partner-badge">Strategic Partner</div>
+                <div class="mobile-partner-card deck-card" data-partner="1">
+                    <div class="mobile-partner-logo">
+                        <img src="AlGA-Arch.jpg" alt="ALGA Arch&Ing Logo">
+                    </div>
+                    <h3 class="mobile-partner-title">ALGA Arch&Ing Partnership</h3>
+                    <div class="mobile-partner-badge">Architectural Partner</div>
+                </div>
+                <div class="mobile-partner-card deck-card" data-partner="2">
+                    <div class="mobile-partner-logo">
+                        <img src="konden-mineral.jpg" alt="Konden Minerals SARL Logo">
+                    </div>
+                    <h3 class="mobile-partner-title">Konden Minerals SARL Partnership</h3>
+                    <div class="mobile-partner-badge">Mining Partner</div>
+                </div>
             </div>
             <div class="partners-row">
                 <div class="partner-card featured">
@@ -2284,88 +2317,74 @@
                 clearInterval(partnerInterval);
             }
             
-            const mobileCard = document.getElementById('mobile-partner-card');
+            const mobileDeck = document.getElementById('mobile-partner-deck');
             const desktopRow = document.querySelector('.partners-row');
             
             if (window.innerWidth <= 768) {
-                // Show mobile card, hide desktop cards
-                if (mobileCard) mobileCard.style.display = 'flex';
+                // Show mobile deck, hide desktop cards
+                if (mobileDeck) mobileDeck.style.display = 'block';
                 if (desktopRow) desktopRow.style.display = 'none';
                 
-                const partners = [
-                    {
-                        logo: 'FALIBRA-Group.jpg',
-                        name: 'Falibra Group Partnership',
-                        nameFr: 'Partenariat Falibra Group',
-                        badge: 'Strategic Partner',
-                        badgeFr: 'Partenaire Stratégique'
-                    },
-                    {
-                        logo: 'AlGA-Arch.jpg',
-                        name: 'ALGA Arch&Ing Partnership',
-                        nameFr: 'Partenariat ALGA Arch&Ing',
-                        badge: 'Architectural Partner',
-                        badgeFr: 'Partenaire Architectural'
-                    },
-                    {
-                        logo: 'konden-mineral.jpg',
-                        name: 'Konden Minerals SARL Partnership',
-                        nameFr: 'Partenariat Konden Minerals SARL',
-                        badge: 'Mining Partner',
-                        badgeFr: 'Partenaire Minier'
+                function cycleDeck() {
+                    const cards = Array.from(mobileDeck.querySelectorAll('.deck-card'));
+                    if (cards.length < 3) return;
+                    
+                    // Smoothly animate the top card out
+                    const topCard = cards[0];
+                    topCard.style.transform = 'translateX(100%) rotateZ(10deg) scale(0.8)';
+                    topCard.style.opacity = '0';
+                    
+                    // Move other cards forward
+                    cards[1].style.transform = 'translateX(0px) translateY(0px) rotateZ(0deg) scale(1)';
+                    cards[1].style.opacity = '1';
+                    cards[1].style.zIndex = '3';
+                    
+                    if (cards[2]) {
+                        cards[2].style.transform = 'translateX(-8px) translateY(4px) rotateZ(-2deg) scale(0.96)';
+                        cards[2].style.opacity = '0.8';
+                        cards[2].style.zIndex = '2';
                     }
-                ];
-
-                let currentIndex = 0;
-                
-                function updatePartnerContent() {
-                    const card = document.getElementById('mobile-partner-card');
-                    const partner = partners[currentIndex];
                     
-                    if (!card) return;
-                    
-                    // Slide out to the left
-                    card.classList.add('slide-out-left');
-                    
+                    // After animation, rearrange DOM
                     setTimeout(() => {
-                        // Update content while card is off-screen
-                        const logo = document.getElementById('mobile-partner-img');
-                        const title = document.getElementById('mobile-partner-title');
-                        const badge = document.getElementById('mobile-partner-badge');
+                        // Move the top card to the end and reset its position
+                        mobileDeck.appendChild(topCard);
+                        topCard.style.transform = 'translateX(-16px) translateY(8px) rotateZ(-4deg) scale(0.92)';
+                        topCard.style.opacity = '0.6';
+                        topCard.style.zIndex = '1';
                         
-                        if (logo) {
-                            logo.src = partner.logo;
-                            logo.alt = partner.name + ' Logo';
-                        }
-                        if (title) {
-                            title.textContent = currentLanguage === 'fr' ? partner.nameFr : partner.name;
-                        }
-                        if (badge) {
-                            badge.textContent = currentLanguage === 'fr' ? partner.badgeFr : partner.badge;
-                        }
-                        
-                        // Position card to slide in from right
-                        card.classList.remove('slide-out-left');
-                        card.classList.add('slide-in-right');
-                        
-                        // Slide in from right
-                        setTimeout(() => {
-                            card.classList.remove('slide-in-right');
-                        }, 50);
-                        
-                    }, 250); // Half of transition duration
-                    
-                    currentIndex = (currentIndex + 1) % partners.length;
+                        // Force reflow to apply changes immediately
+                        mobileDeck.offsetHeight;
+                    }, 800);
                 }
                 
-                // Initial update
-                updatePartnerContent();
+                // Start the cycling
+                partnerInterval = setInterval(cycleDeck, 4000);
                 
-                // Set up interval
-                partnerInterval = setInterval(updatePartnerContent, 3000);
+                // Add click handlers for manual cycling
+                const cards = mobileDeck.querySelectorAll('.deck-card');
+                cards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        // Only allow clicks on the front card
+                        if (card === mobileDeck.querySelector('.deck-card:nth-child(1)')) {
+                            // Clear auto interval temporarily
+                            if (partnerInterval) {
+                                clearInterval(partnerInterval);
+                            }
+                            
+                            // Trigger cycle
+                            cycleDeck();
+                            
+                            // Restart auto interval after a delay
+                            setTimeout(() => {
+                                partnerInterval = setInterval(cycleDeck, 4000);
+                            }, 4000);
+                        }
+                    });
+                });
             } else {
-                // Show desktop cards, hide mobile card
-                if (mobileCard) mobileCard.style.display = 'none';
+                // Show desktop cards, hide mobile deck
+                if (mobileDeck) mobileDeck.style.display = 'none';
                 if (desktopRow) desktopRow.style.display = 'grid';
             }
         }
