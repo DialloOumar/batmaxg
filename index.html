@@ -365,8 +365,8 @@
             z-index: 2;
         }
 
-        .hero-text h1 {
-            font-size: 4rem;
+        .hero-text h2 {
+            font-size: 3rem;
             font-weight: 900;
             line-height: 1.2;
             margin-bottom: 1.5rem;
@@ -376,9 +376,9 @@
         }
 
         /* Reduce font size for English version when content is longer */
-        html[lang="en"] .hero-text h1,
-        .hero-text h1:not([data-lang="fr"]) {
-            font-size: 3.5rem;
+        html[lang="en"] .hero-text h2,
+        .hero-text h2:not([data-lang="fr"]) {
+            font-size: 2.5rem;
         }
 
         @keyframes slideInLeft {
@@ -547,9 +547,9 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1400px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -818,22 +818,6 @@
             transition-delay: 0.2s;
         }
 
-        .service-card.animate-on-scroll:nth-child(3) {
-            transition-delay: 0.3s;
-        }
-
-        .service-card.animate-on-scroll:nth-child(4) {
-            transition-delay: 0.4s;
-        }
-
-        .service-card.animate-on-scroll:nth-child(5) {
-            transition-delay: 0.5s;
-        }
-
-        .service-card.animate-on-scroll:nth-child(6) {
-            transition-delay: 0.6s;
-        }
-
         .timeline-step.animate-on-scroll:nth-child(2) {
             transition-delay: 0.1s;
         }
@@ -1032,7 +1016,7 @@
                 padding-top: 3rem;
             }
 
-            .hero-text h1 {
+            .hero-text h2 {
                 font-size: 1.4rem;
                 line-height: 1.5;
                 margin-top: 2rem;
@@ -1441,6 +1425,17 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .avatar-initials {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
         }
 
         .team-member h4 {
@@ -1991,11 +1986,11 @@
 
         <div class="hero-content">
             <div class="hero-text">
-                <h1>
+                <h2>
                     <span data-en="Building" data-fr="Bâtir">Building</span> <span class="gradient-text" data-en="Together," data-fr="ensemble,">Together,</span> <span data-en="Sharing to Innovate" data-fr="échanger pour innover">Sharing to Innovate</span>
-                </h1>
-                <p data-en="Comprehensive construction and logistics solutions that deliver excellence on every project. From groundbreaking to completion, we move your vision forward." data-fr="Solutions complètes de construction et de logistique qui offrent l'excellence sur chaque projet. De la première pelletée à l'achèvement, nous concrétisons votre vision.">
-                    Comprehensive construction and logistics solutions that deliver excellence on every project. From groundbreaking to completion, we move your vision forward.
+                </h2>
+                <p data-en="Expert in building construction, public works, and authorized supplier of fiscal stamps. We deliver excellence on every project from foundation to completion." data-fr="Expert en construction de bâtiments, travaux publics et fournisseur agréé de timbres fiscaux. Nous offrons l'excellence sur chaque projet des fondations à l'achèvement.">
+                    Expert in building construction, public works, and authorized supplier of fiscal stamps. We deliver excellence on every project from foundation to completion.
                 </p>
                 <div class="hero-buttons">
                     <button class="btn-primary" data-en="Start Your Project" data-fr="Démarrer Votre Projet">Start Your Project</button>
@@ -2010,7 +2005,7 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-number" data-target="24" data-suffix="/7">24/7</div>
-                        <div class="stat-label" data-en="Logistics Support" data-fr="Support Logistique">Logistics Support</div>
+                        <div class="stat-label" data-en="Technical Support" data-fr="Support Technique">Technical Support</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number" data-target="98" data-suffix="%">98%</div>
@@ -2018,7 +2013,7 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-number" data-target="15" data-suffix="+">15+</div>
-                        <div class="stat-label" data-en="Years Experience" data-fr="Années d'Expérience">Years Experience</div>
+                        <div class="stat-label" data-en="Years in BTP" data-fr="Années en BTP">Years in BTP</div>
                     </div>
                 </div>
             </div>
@@ -2034,11 +2029,11 @@
             <div class="about-text">
                 <div class="about-card">
                     <h3 data-en="Our Mission" data-fr="Notre Mission">Our Mission</h3>
-                    <p data-en="To deliver exceptional construction and logistics solutions that exceed expectations while building lasting partnerships with our clients. We combine cutting-edge technology with time-tested expertise to create infrastructure that stands the test of time." data-fr="Livrer des solutions de construction et de logistique exceptionnelles qui dépassent les attentes tout en bâtissant des partenariats durables avec nos clients. Nous combinons une technologie de pointe avec une expertise éprouvée pour créer une infrastructure qui résiste à l'épreuve du temps.">To deliver exceptional construction and logistics solutions that exceed expectations while building lasting partnerships with our clients. We combine cutting-edge technology with time-tested expertise to create infrastructure that stands the test of time.</p>
+                    <p data-en="To deliver exceptional construction and public works solutions while providing reliable fiscal stamp supply services. We combine expertise in BTP with trusted administrative services, building lasting partnerships with our clients." data-fr="Livrer des solutions exceptionnelles en BTP et travaux publics tout en fournissant des services fiables de timbres fiscaux. Nous combinons l'expertise en BTP avec des services administratifs de confiance, bâtissant des partenariats durables avec nos clients.">To deliver exceptional construction and public works solutions while providing reliable fiscal stamp supply services. We combine expertise in BTP with trusted administrative services, building lasting partnerships with our clients.</p>
                 </div>
                 <div class="about-card">
                     <h3 data-en="Our Vision" data-fr="Notre Vision">Our Vision</h3>
-                    <p data-en="To be the leading construction and logistics company, recognized for our innovation, sustainability, and unwavering commitment to quality. We envision a future where every project we touch contributes to stronger, more connected communities." data-fr="Être la société de construction et de logistique leader, reconnue pour notre innovation, notre durabilité et notre engagement indéfectible envers la qualité. Nous envisageons un avenir où chaque projet que nous touchons contribue à des communautés plus fortes et plus connectées.">To be the leading construction and logistics company, recognized for our innovation, sustainability, and unwavering commitment to quality. We envision a future where every project we touch contributes to stronger, more connected communities.</p>
+                    <p data-en="To be the leading construction company in Guinea, recognized for our excellence in building, public works, and our reliability as an authorized fiscal stamps supplier. We envision infrastructure that stands the test of time and administrative services that simplify processes." data-fr="Être l'entreprise de construction leader en Guinée, reconnue pour notre excellence en bâtiment, travaux publics et notre fiabilité comme fournisseur agréé de timbres fiscaux. Nous envisageons des infrastructures durables et des services administratifs qui simplifient les démarches.">To be the leading construction company in Guinea, recognized for our excellence in building, public works, and our reliability as an authorized fiscal stamps supplier. We envision infrastructure that stands the test of time and administrative services that simplify processes.</p>
                 </div>
                 <div class="about-card">
                     <h3 data-en="Our Values" data-fr="Nos Valeurs">Our Values</h3>
@@ -2056,7 +2051,7 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-avatar">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Ahmed Diallo">
+                            <div class="avatar-initials">AD</div>
                         </div>
                         <h4>Ahmed Diallo</h4>
                         <p class="member-title" data-en="Chief Executive Officer" data-fr="Directeur Général">Chief Executive Officer</p>
@@ -2064,7 +2059,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Mohamed Diallo">
+                            <div class="avatar-initials">MD</div>
                         </div>
                         <h4>Mohamed Diallo</h4>
                         <p class="member-title" data-en="Chief Operations Officer" data-fr="Directrice des Opérations">Chief Operations Officer</p>
@@ -2072,7 +2067,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-avatar">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Alpha Oumar Diallo">
+                            <div class="avatar-initials">AOD</div>
                         </div>
                         <h4>Alpha Oumar Diallo</h4>
                         <p class="member-title" data-en="Head of IT" data-fr="Chef de l'Informatique">Head of IT</p>
@@ -2080,11 +2075,11 @@
                     </div>
                     <div class="team-member">
                         <div class="member-avatar">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Mohamed Mouctar Traore">
+                            <div class="avatar-initials">MMT</div>
                         </div>
                         <h4>Mohamed Mouctar Traore</h4>
                         <p class="member-title" data-en="Technical Consultant" data-fr="Consultant Technique">Technical Consultant</p>
-                        <p class="member-bio" data-en="Civil engineer specializing in technical supervision and project coordination, ensuring quality standards and timely delivery." data-fr="Ingénieur civil spécialisé dans le suivi technique et la coordination de projets, garantissant la qualité et le respect des délais.">Ingénieur civil spécialisé dans le suivi technique et la coordination de projets, garantissant la qualité et le respect des délais.</p>
+                        <p class="member-bio" data-en="Civil engineer specializing in technical supervision and project coordination, ensuring quality standards and timely delivery." data-fr="Ingénieur civil spécialisé dans le suivi technique et la coordination de projets, garantissant la qualité et le respect des délais.">Civil engineer specializing in technical supervision and project coordination, ensuring quality standards and timely delivery.</p>
                     </div>
                 </div>
             </div>
@@ -2094,50 +2089,22 @@
     <section class="services" id="services">
         <div class="section-header">
             <h2><span data-en="Our" data-fr="Nos">Our</span> <span class="gradient-text" data-en="Services" data-fr="Services">Services</span></h2>
-            <p data-en="End-to-end solutions for your construction and logistics needs" data-fr="Solutions complètes pour vos besoins de construction et de logistique">End-to-end solutions for your construction and logistics needs</p>
+            <p data-en="Specialized solutions in construction and public works" data-fr="Solutions spécialisées en BTP et travaux publics">Specialized solutions in construction and public works</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Commercial Construction">
+                    <img src="https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="BTP">
                 </div>
-                <h3 data-en="Commercial Construction" data-fr="Construction Commerciale">Commercial Construction</h3>
-                <p data-en="Expert construction services for office buildings, retail spaces, and industrial facilities with precision and efficiency." data-fr="Services de construction experts pour immeubles de bureaux, espaces commerciaux et installations industrielles avec précision et efficacité.">Expert construction services for office buildings, retail spaces, and industrial facilities with precision and efficiency.</p>
+                <h3 data-en="Building & Public Works (BTP)" data-fr="Bâtiment & Travaux Publics (BTP)">Building & Public Works (BTP)</h3>
+                <p data-en="Complete construction solutions including residential, commercial and industrial buildings, roads, bridges, water networks and civil engineering. From foundation to finishing, we deliver quality infrastructure projects with expert technical supervision." data-fr="Solutions complètes de construction incluant bâtiments résidentiels, commerciaux et industriels, routes, ponts, réseaux d'eau et génie civil. Des fondations aux finitions, nous livrons des projets d'infrastructure de qualité avec supervision technique experte.">Complete construction solutions including residential, commercial and industrial buildings, roads, bridges, water networks and civil engineering. From foundation to finishing, we deliver quality infrastructure projects with expert technical supervision.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Residential Development">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Fiscal Stamps">
                 </div>
-                <h3 data-en="Residential Development" data-fr="Développement Résidentiel">Residential Development</h3>
-                <p data-en="Quality residential construction from single-family homes to multi-unit developments, built to last." data-fr="Construction résidentielle de qualité, des maisons unifamiliales aux développements multi-unités, construites pour durer.">Quality residential construction from single-family homes to multi-unit developments, built to last.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Material Logistics">
-                </div>
-                <h3 data-en="Material Logistics" data-fr="Logistique de Matériaux">Material Logistics</h3>
-                <p data-en="Seamless supply chain management ensuring materials arrive on time, every time, keeping your project on schedule." data-fr="Gestion transparente de la chaîne d'approvisionnement garantissant que les matériaux arrivent à temps, à chaque fois, maintenant votre projet dans les délais.">Seamless supply chain management ensuring materials arrive on time, every time, keeping your project on schedule.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Equipment Transport">
-                </div>
-                <h3 data-en="Equipment Transport" data-fr="Transport d'Équipement">Equipment Transport</h3>
-                <p data-en="Specialized heavy equipment transport and machinery logistics with safety as our top priority." data-fr="Transport spécialisé d'équipement lourd et logistique de machinerie avec la sécurité comme priorité absolue.">Specialized heavy equipment transport and machinery logistics with safety as our top priority.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Project Management">
-                </div>
-                <h3 data-en="Project Management" data-fr="Gestion de Projet">Project Management</h3>
-                <p data-en="Comprehensive project oversight from planning to execution, ensuring timely delivery within budget." data-fr="Supervision complète du projet de la planification à l'exécution, garantissant une livraison en temps voulu dans le budget.">Comprehensive project oversight from planning to execution, ensuring timely delivery within budget.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sustainable Solutions">
-                </div>
-                <h3 data-en="Sustainable Solutions" data-fr="Solutions Durables">Sustainable Solutions</h3>
-                <p data-en="Eco-friendly construction practices and green logistics to minimize environmental impact." data-fr="Pratiques de construction écologiques et logistique verte pour minimiser l'impact environnemental.">Eco-friendly construction practices and green logistics to minimize environmental impact.</p>
+                <h3 data-en="Fiscal Stamps Supply" data-fr="Fourniture de Timbres Fiscaux">Fiscal Stamps Supply</h3>
+                <p data-en="Authorized supplier of fiscal stamps and official documents. We provide reliable, secure and efficient service for all your administrative needs. Trusted partner for businesses and individuals requiring official documentation." data-fr="Fournisseur agréé de timbres fiscaux et documents officiels. Nous fournissons un service fiable, sécurisé et efficace pour tous vos besoins administratifs. Partenaire de confiance pour entreprises et particuliers nécessitant une documentation officielle.">Authorized supplier of fiscal stamps and official documents. We provide reliable, secure and efficient service for all your administrative needs. Trusted partner for businesses and individuals requiring official documentation.</p>
             </div>
         </div>
     </section>
